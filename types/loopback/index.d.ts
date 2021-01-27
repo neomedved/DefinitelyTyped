@@ -157,7 +157,10 @@ declare namespace l {
              * ``
              *  @returns {Array} Array of model classes
              */
-            models(): Array<typeof Model>;
+            models: {
+                  (): Array<typeof Model>;
+                  [modelName: string]: typeof Model;
+            };
 
             /**
              * Get all remote objects.
